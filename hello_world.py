@@ -5,6 +5,7 @@ from selenium import webdriver
 class HelloWorld(unittest.TestCase):
 
 #Esta línea sirve para preparar el entorno de prueba
+    #Classmethod sirve para ejecutar las pruebas en una misma ventana del navegador, sin esto se ejecuta una ventana diferente por prueba
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Chrome(executable_path=r'/home/neryr/chromedriver/stable/chromedriver')
