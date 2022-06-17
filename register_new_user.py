@@ -1,6 +1,9 @@
 import unittest
 from selenium import webdriver
 from pyunitreport import HTMLTestRunner
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
 
 class RegisterNewUser(unittest.TestCase):
 
@@ -13,10 +16,10 @@ class RegisterNewUser(unittest.TestCase):
 
     def test_new_user(self):
         driver = self.driver
-        driver.find_element_by_xpath('/html/body/div/div[2]/header/div/div[2]/div/a/span[2]').click()
-        driver.find_element_by_link_text('Log In').click()
+        driver.find_element(by=By.XPATH, value = "/html/body/div/div[2]/header/div/div[2]/div/a/span[2]").click
+        driver.find_element(by=By.XPATH, value= '/html/body/div/div[2]/header/div/div[5]/div/ul/li[6]/a').click
 
-        create_account_button = driver.find_element_by_xpath('/html/body/div/div[2]/div[2]/div/div/div[2]/form/div/div[1]/div[2]/a/span/span').click()
+        create_account_button = driver.find_element(by=By.XPATH, value= '/html/body/div/div[2]/div[2]/div/div/div[2]/form/div/div[1]/div[2]/a/span/span').click()
         self.assertTrue(create_account_button.is_displayed() and create_account_button.is_enabled())
         create_account_button.click()
 
