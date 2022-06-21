@@ -42,4 +42,4 @@ class DynamicControls(unittest.TestCase):
         self.driver.close()
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2, testRunner=HTMLTestRunner(output='reportes', report_name='dynamic_elements'))
+    unittest.main(verbosity=2, testRunner=HTMLTestRunner(output='reportes', report_name='dynamic_controls'))
